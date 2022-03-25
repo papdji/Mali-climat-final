@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="secondary">
+
+      <ion-button>
+        <ion-icon slot="end" name="notifications-outline" routerLink="/profile"></ion-icon>
+      </ion-button>
+
+      <!-- <ion-button>
+        <ion-icon slot="icon-only" name="search"></ion-icon>
+      </ion-button> -->
+    </ion-buttons>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary" (click)=presentPopover($event)>
+      <ion-button color="light">
+        <ion-icon slot="icon-only" ios="ellipsis-horizontal" md="ellipsis-vertical"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Mali Clima</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-tabs (ionTabsDidChange)='setSelectedTab()' color="secondary">
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="feed">
+      <ion-icon [name]="selected == 'feed' ? 'newspaper' : 'newspaper-outline'"></ion-icon>
+      <ion-label>Climat</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="forecast">
+      <ion-icon [name]="selected == 'forecast' ? 'sunny' : 'sunny-outline'"></ion-icon>
+      <ion-label>Prévision</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="alertes">
+      <ion-icon [name]="selected == 'alertes' ? 'water' : 'water-outline'"></ion-icon>
+      <ion-label>Météo</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="chat">
+      <ion-icon [name]="selected == 'chat' ? 'chatbubble-ellipses' : 'chatbubble-ellipses-outline'"></ion-icon>
+      <ion-label>Chat</ion-label>
+    </ion-tab-button>
+
+    <!-- <ion-tab-button tab="localites">
+      <ion-icon [name]="selected == 'localites' ? 'notifications' : 'notifications-outline'"></ion-icon>
+      <ion-label>Localités</ion-label>
+    </ion-tab-button> -->
+  </ion-tab-bar>
+</ion-tabs>
+

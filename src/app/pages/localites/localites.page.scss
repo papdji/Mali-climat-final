@@ -1,0 +1,29 @@
+ion-toolbar{
+
+  --background:linear-gradient(#17BB89, #17BB89);
+  color: white;
+  ion-title{
+      font-size: 14px;
+      font-weight: 900;
+  }
+}
+ion-content {
+  --background: linear-gradient(0deg, rgba(165, 255, 170, 0.952), rgb(195, 255, 200));
+}
+
+ion-img {
+  width: 90%;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+
+// @keyframes animateBackground {
+//   0% {
+//     background-position: -468px 0
+//   }
+
+//   100% {
+//     background-position: 468px 0
+//   }
+// }

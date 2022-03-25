@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Créer un nouveau message</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">Fermer</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Scrollable Segment -->
+  <ion-list-header>Sélectionnez le type de poste</ion-list-header>
+
+  <ion-segment color="primary" value="information" (ionChange)="typePostChanged($event)" value="information">
+    <ion-segment-button value="climat">
+      <ion-label>Climat</ion-label>
+      <ion-icon name="partly-sunny-outline" color="primary"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="question">
+      <ion-label>Question</ion-label>
+      <ion-icon name="help-circle-outline" color="warning"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="conseil">
+      <ion-label>conseil</ion-label>
+      <ion-icon name="information-circle-outline" color="success"></ion-icon>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-item>
+    <ion-label>Choissez la localité</ion-label>
+  <ion-select interface="action-sheet" cancelText="Annuler" name="ville" [(ngModel)]="ville" (ionChange)="villePostchanged($event)" value="localites">
+    <ion-select-option value="Bamako">Bamako</ion-select-option>
+    <ion-select-option value="Kayes">Kayes</ion-select-option>
+    <ion-select-option value="Koulikoro">Koulikoro</ion-select-option>
+    <ion-select-option value="Sikasso">Sikasso</ion-select-option>
+    <ion-select-option value="Segou">Ségou</ion-select-option>
+    <ion-select-option value="Mopti">Mopti</ion-select-option>
+    <ion-select-option value="Tombouctou">Tombouctou</ion-select-option>
+    <ion-select-option value="Goa">Goa</ion-select-option>
+    <ion-select-option value="Kidal">Kidal</ion-select-option>
+    <ion-select-option value="San">San</ion-select-option>
+    <ion-select-option value="Niono">Niono</ion-select-option>
+    <ion-select-option value="Koutiala">Koutiala</ion-select-option>
+    <ion-select-option value="Nenaka">Nenaka</ion-select-option>
+    <ion-select-option value="Bougouni">Bougouni</ion-select-option>
+    <ion-select-option value="Taoudeni">Taoudeni</ion-select-option>
+  </ion-select>
+  </ion-item>
+
+  <!-- Textarea avec un nombre personnalisé de lignes et de colonnes -->
+<ion-item>
+  <ion-textarea rows="1" cols="6" [(ngModel)]="newPostMsg" placeholder="Entrez plus d'informations pour publier ici..."></ion-textarea>
+</ion-item>
+
+<ion-button expand="block" [disabled]="newPostMsg === ''" (click)="addNewPost()"
+>Publier</ion-button>
+
+</ion-content>

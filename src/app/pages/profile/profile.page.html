@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar></ion-toolbar>
+</ion-header>
+<ion-content>
+
+  <div *ngIf="!loadingData">
+
+    <div class="card">
+      <div class="header">
+        <div class="avatar">
+          <img [src]="currentUser.image" alt="pohoto profile">
+        </div>
+      </div>
+
+      <div class="card-body">
+        <div class="user-meta ion-text-center">
+          <ion-list>
+            <ion-list-header>Utilisateur</ion-list-header>
+
+            <ion-item>
+              <ion-label position="stacked">Nom</ion-label>
+              <ion-input [value]="currentUser.name"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Email</ion-label>
+              <ion-input [value]="currentUser.email" readonly></ion-input>
+            </ion-item>
+
+            <!-- <ion-item >
+              <ion-label>Profile</ion-label>
+              <ion-select placeholder="Select One" interface="action-sheet" cancelText="Annuler" name="profile" [(ngModel)]="profile"
+              (ionChange)="true">
+                <ion-select-option value="a">Agriculteur</ion-select-option>
+                <ion-select-option value="j">Jardinier</ion-select-option>
+                <ion-select-option value="ac">Acteur climat</ion-select-option>
+                <ion-select-option value="e">Environnementaliste</ion-select-option>
+                <ion-select-option value="ad">Administration publique</ion-select-option>
+              </ion-select>
+            </ion-item> -->
+
+            <ion-item>
+              <ion-label position="stacked">Ville</ion-label>
+              <ion-input placeholder="lieu de residence"></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-label position="stacked">Nméro téléphone</ion-label>
+              <ion-input placeholder="12345678"></ion-input>
+            </ion-item>
+
+            <ion-list-header>Autorisation</ion-list-header>
+
+            <ion-item>
+              <ion-label position="stacked">Autoriser les utilisateurs à m'appeler</ion-label>
+              <ion-checkbox slot="end" checked="true"></ion-checkbox>
+            </ion-item>
+          </ion-list>
+
+          <ion-button class="ion-margin" expand="block" routerLink="/tabs">
+            <ion-icon slot="start" name="save-outline"></ion-icon>
+            Enregistrer
+          </ion-button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header [translucent]="false">
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Actualités</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-slides pager="true" [options]="slideOpts" #slides>
+
+    <ion-slide *ngFor="let actu of actualites">
+      <ion-grid>
+        <ion-row>
+          <ion-col size-md="4" offset-md="2">
+            <h1>{{actu.Name}}</h1>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-md="4" offset-md="2">
+            <ion-img src="{{actu.Image}}"></ion-img>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col size-md="6" offset-md="5">
+            <ion-text>
+              {{actu.Description}}
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <!-- <ion-fab vertical="center" horizontal="start">
+        <ion-fab-button (click)="slides.slidePrev()" color="light">
+          <ion-icon name="arrow-back"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+      <ion-fab vertical="center" horizontal="end">
+        <ion-fab-button (click)="slides.slideNext()">
+          <ion-icon name="arrow-forward"></ion-icon>
+        </ion-fab-button>
+      </ion-fab> -->
+    </ion-slide>
+  </ion-slides>
+</ion-content>

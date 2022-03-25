@@ -1,0 +1,79 @@
+// ion-toolbar{
+
+//   --background:linear-gradient(#17BB89, #17BB89);
+//   color: white;
+//   ion-title{
+//       font-size: 14px;
+//       font-weight: 900;
+//   }
+// }
+ion-content {
+  --background: linear-gradient(0deg, rgb(175, 172, 172),  rgb(160, 160, 160));
+}
+
+.message-input {
+    width: 100%;
+    border: 1px solid var(--ion-color-medium);
+    border-radius: 25px;
+    background-color:  #ffffffc4;
+    resize: none;
+    margin-top: 0px;
+    --padding-start: 4px;
+}
+
+.message {
+    padding: 10px !important;
+    border-radius: 10px !important;
+    margin-bottom: 4px !important;
+    white-space: pre-wrap;
+}
+
+.my-message {
+    background: #107403;
+
+    .color-secondary {
+        color: #ffffff;
+    }
+
+    .color-white {
+        color: rgb(255, 255, 255);
+    }
+
+    .time {
+        color: #000000;
+        float: right;
+        font-size: small;
+    }
+}
+
+.other-message {
+    background: #026d22;
+
+    .color-white {
+        color: #ffffffc4;
+    }
+
+    .color-secondary {
+      color: #ffffff;
+    }
+
+    .time {
+        color: #000000;
+        float: right;
+        font-size: small;
+    }
+}
+
+// ion-content{
+//     --ion-background-color: var(--ion-color-step-700) !important;
+//     // --ion-background-color: #f2f2f2 !important
+// }
+
+ion-img {
+    width: 40px;
+    border-radius: 20px;
+}
+
+.top-row {
+    margin-bottom: 10px;
+}

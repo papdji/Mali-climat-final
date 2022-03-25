@@ -1,0 +1,63 @@
+
+<ion-content>
+
+  <ion-img src="./assets/logo.png"></ion-img>
+
+  <div class="login-section ion-padding">
+    <div class="heading ion-padding">
+      <p>Connectez-vous pour continuer</p>
+    </div>
+
+    <!-- initiale-->
+    <form [formGroup]="credentialForm">
+
+      <div class="form-input" style="border-radius: 45px;">
+        <ion-icon name="mail-outline"></ion-icon>
+        <ion-item style="border-radius: 20px;">
+          <ion-label position="floating">Email</ion-label>
+          <ion-input
+            formControlName="email"
+            autofocus="false"
+            clearInput="true">
+          </ion-input>
+        </ion-item>
+      </div>
+
+      <!-- Message d'alerte de saisie incorrecte -->
+      <div *ngIf="(email.dirty || email.touched) && email.errors" class="errors">
+        <span *ngIf="email.errors?.required">Email est requis</span>
+        <span *ngIf="email.errors?.email">Email est invalide</span>
+      </div >
+
+      <div class="form-input">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <ion-item style="border-radius: 20px;">
+          <ion-label position="floating">Mot de passe</ion-label>
+          <ion-input
+            type="password"
+            formControlName="password"
+            clearInput="true">
+          </ion-input>
+        </ion-item>
+      </div>
+
+
+      <!-- Message d'alerte de saisie incorrecte -->
+      <div *ngIf="(password.dirty || password.touched) && password.errors" class="errors">
+        <span *ngIf="password.errors?.required">Mot de passe requis</span>
+        <span *ngIf="password.errors?.minlength">Le mot de passe doit comporter 6 caractères</span>
+      </div>
+    </form>
+    <!-- <ion-icon name="create"><a class="sign-up-link" routerLink="/conditions"></a></ion-icon> -->
+    <div class="action-buttons">
+      <ion-button size="medium" class="login-button" (click)="signIn()">Se connecter</ion-button>
+      <ion-button class="signup-button" size="medium" fill="outline" routerLink="/signup">S'inscrire</ion-button>
+      <p>Mot de passe oublier ?</p>
+    </div>
+
+    <!-- <ion-button (click)="signUp()" expand="full">S'inscrire</ion-button>
+    <ion-button (click)="signIn()" expand="full" color="secondary">Se connecter</ion-button> -->
+
+  </div>
+
+</ion-content>
