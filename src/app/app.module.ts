@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
+import { DatePipe } from '@angular/common';
+import { Geolocation } from '@capacitor/geolocation';
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireMessagingModule } from '@angular/fire/messaging';
 import { HttpClientModule } from '@angular/common/http';
@@ -25,7 +28,7 @@ registerLocaleData(localeFr);
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(),
+    IonicModule.forRoot({ mode: 'ios' }),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireMessagingModule,
@@ -35,8 +38,12 @@ registerLocaleData(localeFr);
   providers: [
     StatusBar,
     SplashScreen,
+    DatePipe,
+    
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    {provide: LOCALE_ID, useValue: 'fr-FR'}],
+    {provide: LOCALE_ID, useValue: 'fr-FR'},
+    
+  ],
   
   bootstrap: [AppComponent]
 })

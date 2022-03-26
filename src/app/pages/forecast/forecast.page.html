@@ -120,7 +120,7 @@
               <ion-item>
                 <div class="hourly-content">
                   <div class="hourly-time">
-                    {{ hour.time | date:'medium':'fr-FR' }} <img [src]="hour.condition.icon | safer: 'url'">
+                    {{ hour.time | date:'short':'fr-FR' }} <img [src]="hour.condition.icon | safer: 'url'">
                   </div>
                   <div class="hourly-degree">
                     {{ hour.temp_c }} ℃

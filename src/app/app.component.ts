@@ -16,14 +16,14 @@ export class AppComponent {
       url: '/',
       icon: 'home'
     },
-    { title: 'Accueil', url: '/home', icon: 'home' },
+    { title: 'Localités', url: '/home', icon: 'earth' },
     { title: 'Condition', url: '/conditions', icon: 'folder' },
     { title: 'A propos', url: '/abouts', icon: 'stats-chart' },
     { title: 'Confidentialité', url: '/confidentialites', icon: 'create' },
-    { title: 'Profile', url: '/profile', icon: 'person' },
-    { title: 'Profile', url: '/profile', icon: 'person' },
+    // { title: 'Profile', url: '/profile', icon: 'person' },
+    // { title: 'Profile', url: '/profile', icon: 'person' },
     {
-      title: 'Settings',
+      title: 'Réglages',
       url: '/settings',
       icon: 'settings'
     }
