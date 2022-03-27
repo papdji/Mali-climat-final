@@ -1,5 +1,5 @@
 ion-toolbar {
-    --background: linear-gradient(#40e031, #40e031);
+    --background-clor: #40e031;
     color: white;
 
     ion-title {
@@ -9,7 +9,7 @@ ion-toolbar {
 
     ion-buttons {
         ion-menu-button {
-            --color: #fff;
+            --color: rgb(2, 5, 153);
             font-weight: bold;
             font-size: 50px;
         }
@@ -22,112 +22,112 @@ ion-toolbar {
     }
 }
 
-ion-content {
-    ion-slides {
-        padding: 0px;
-        margin: 1px 0 0 0px;
-        width: 100%;
+// ion-content {
+//     ion-slides {
+//         padding: 0px;
+//         margin: 1px 0 0 0px;
+//         width: 100%;
 
-        ion-slide {
-            width: 100%;
-            padding: 0px;
-            margin: 0px;
+//         ion-slide {
+//             width: 100%;
+//             padding: 0px;
+//             margin: 0px;
 
-            ion-card {
-                border: 1px solid #17BB89;
-                width: 98%;
-                padding: 0px;
-                margin: 3px 0px;
+//             ion-card {
+//                 border: 1px solid #17BB89;
+//                 width: 98%;
+//                 padding: 0px;
+//                 margin: 3px 0px;
 
-                ion-card-header {
-                    width: 98%;
-                    padding: 0px;
-                    margin: 0px auto;
+//                 ion-card-header {
+//                     width: 98%;
+//                     padding: 0px;
+//                     margin: 0px auto;
 
-                    img {
-                        height: 150px;
-                        width: 100%;
-                    }
-                }
+//                     img {
+//                         height: 150px;
+//                         width: 100%;
+//                     }
+//                 }
 
-                ion-card-content {
-                    width: 98%;
-                    height: 90px;
-                    margin: 0px auto 0 auto;
-                    font-family: Georgia, 'Times New Roman', Times, serif;
-                    font-size: 10px;
+//                 ion-card-content {
+//                     width: 98%;
+//                     height: 90px;
+//                     margin: 0px auto 0 auto;
+//                     font-family: Georgia, 'Times New Roman', Times, serif;
+//                     font-size: 10px;
 
-                }
-            }
-        }
-    }
+//                 }
+//             }
+//         }
+//     }
 
-    .cardStat {
-        margin: 0px auto;
+//     .cardStat {
+//         margin: 0px auto;
 
-        .statitle {
-            text-align: center;
-            font-weight: bold;
-            color: #17BB89;
+//         .statitle {
+//             text-align: center;
+//             font-weight: bold;
+//             color: #17BB89;
 
-            h4 {
-                font-size: 18px;
-            }
+//             h4 {
+//                 font-size: 18px;
+//             }
 
-            ion-icon {
-                text-align: center;
-                background-color: #fff;
-                color: #17BB89;
-            }
-        }
+//             ion-icon {
+//                 text-align: center;
+//                 background-color: #fff;
+//                 color: #17BB89;
+//             }
+//         }
 
-        ion-list {
-            .stacontentP {
-                margin: 10px auto;
+//         ion-list {
+//             .stacontentP {
+//                 margin: 10px auto;
 
-                ion-item {
-                    ion-icon {
-                        color: #1b7038;
-                    }
+//                 ion-item {
+//                     ion-icon {
+//                         color: #1b7038;
+//                     }
 
-                    ion-note {
-                        font-size: 16px;
-                    }
-                }
+//                     ion-note {
+//                         font-size: 16px;
+//                     }
+//                 }
 
-                ion-progress-bar {
-                    height: 6px;
-                }
+//                 ion-progress-bar {
+//                     height: 6px;
+//                 }
 
-            }
+//             }
 
-            .stacontentT {
-                margin: 10px auto;
+//             .stacontentT {
+//                 margin: 10px auto;
 
-                ion-item {
-                    ion-icon {
-                        color: #070707;
-                    }
+//                 ion-item {
+//                     ion-icon {
+//                         color: #070707;
+//                     }
 
-                    ion-note {
-                        font-size: 16px;
-                    }
-                }
+//                     ion-note {
+//                         font-size: 16px;
+//                     }
+//                 }
 
-                ion-progress-bar {
-                    height: 6px;
-                }
-            }
-        }
-    }
-}
+//                 ion-progress-bar {
+//                     height: 6px;
+//                 }
+//             }
+//         }
+//     }
+// }
 
 ion-footer {
     .footer {
 
         ion-item {
             color: #fff;
-            --background: #17BB89;
+            --background: #17bb1f;
 
             ion-avatar {
 

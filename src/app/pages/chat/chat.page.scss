@@ -7,9 +7,9 @@
 //       font-weight: 900;
 //   }
 // }
-ion-content {
-  --background: linear-gradient(0deg, rgb(175, 172, 172),  rgb(160, 160, 160));
-}
+ion-content{
+    --ion-background-color: var(--ion-color-success)
+ }
 
 .message-input {
     width: 100%;
@@ -29,7 +29,7 @@ ion-content {
 }
 
 .my-message {
-    background: #107403;
+    background: #2b7744;
 
     .color-secondary {
         color: #ffffff;

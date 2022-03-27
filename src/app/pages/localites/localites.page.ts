@@ -22,7 +22,7 @@ export class LocalitesPage implements OnInit {
       var mm = String(this.today.getMonth() + 1).padStart(2, '0'); //January is 0!
       var yyyy = this.today.getFullYear();
 
-      this.today = mm + '/' + dd + '/' + yyyy;
+      this.today = dd + '/' + mm+ '/' + yyyy;
       console.log(this.today);
     this.firestore.firestore.collection("conseils").where("Date", "==", this.today)
     .get()

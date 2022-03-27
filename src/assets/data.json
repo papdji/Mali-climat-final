@@ -4,40 +4,43 @@
       "image": "assets/images/progressive.jpg",
       "title": "Bamako",
       "slug": "Bamako",
-      "description": "Works for every user, regardless of browser choice because they’re built with progressive enhancement as a core tenant."
+      "description": "Bamako occupe la frange correspondant à la zone de la Savane soudanienne occidentale Elle bénéficie de ce fait. d'un climat tropical assez humide avec un total des précipitations annuelles de 878 millimètres mais avec une saison sèche et une saison des pluies bien marquées",
+      "position": "justify",
+      "height": 500
+
     },
     {
       "image": "assets/images/responsive.jpg",
       "title": "Kayes",
       "slug": "Kayes",
-      "description": "FVille très chaude."
+      "description": "Kayes est surnommée « La cocotte-minute de l'Afrique » en raison de ses températures moyennes très élevées.."
     },
     {
       "image": "assets/images/connectivity-independent.jpg",
       "title": "Koulikoro",
       "slug": "Koulikoro",
-      "description": "Enhanced with service workers to work offline or on low-quality networks."
+      "description": "Elle s'étend sur la plaine en bordure du fleuve surplombée par un plateau extension des monts Manding appelé le Niana Koulou."
+    },
+    {
+      "image": "assets/images/sikasso.jpg",
+      "title": "Sikasso",
+      "slug": "Sikasso",
+      "description": "Bénéficiant d’un climat sous-tropical avec des précipitations très abondantes durant la saison des pluies (298,6 mm de hauteur de pluie pour le mois le plus arrosé), la production agricole est abondante.."
     },
     {
       "image": "assets/images/app-like.jpg",
-      "title": "Sikasso",
-      "slug": "Sikasso",
-      "description": "Feels like an app to the user with app-style interactions and navigation."
+      "title": "Ségou",
+      "slug": "Ségou",
+      "description": "essentiellement située dans la zone sahélienne où elle bénéficie d’un climat semi-aride (moyenne des précipitations annuelles : 513 mm). La présence de plusieurs cours d’eau (elle est traversée par le fleuve Niger (sur 292 km) ainsi que la rivière Bani) permet les cultures irriguées.."
     },
     {
       "image": "assets/images/fresh.jpg",
-      "title": "Ségou",
-      "slug": "Ségou",
-      "description": "Always up-to-date thanks to the service worker update process."
-    },
-    {
-      "image": "assets/images/safe.jpg",
       "title": "Mopti",
       "slug": "Mopti",
       "description": "Because a PWA has a more intimate user experience and because all network requests can be intercepted through service workers, it is a must to host the PWA over HTTPS to prevent man-in-the-middle attacks."
     },
     {
-      "image": "assets/images/discoverable.jpg",
+      "image": "assets/images/tombouctou.jpg",
       "title": "Toumbouctou",
       "slug": "Toumbouctou",
       "description": "Because a progressive web app is a website, it should be discoverable in search engines. This is a major advantage over native applications, which still lag behind websites in searchability."
@@ -49,7 +52,7 @@
       "description": "Makes re-engagement easy through features like push notifications."
     },
     {
-      "image": "assets/images/installable.jpg",
+      "image": "assets/images/Koutia.jpg",
       "title": "Koutiala",
       "slug": "Koutiala",
       "description": "Allows users to 'keep' apps they find most useful on their home screen without the hassle of an app store middleman."

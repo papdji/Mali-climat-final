@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { AngularFireAuth } from '@angular/fire/auth';
 import { MenuController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
@@ -10,9 +9,13 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
+  public labels = ['Test'];
+  public currentUser: any;
+  public dark = false;
+
   public appPages = [
     {
-      title: 'Home',
+      title: 'Accueil',
       url: '/',
       icon: 'home'
     },
@@ -20,8 +23,7 @@ export class AppComponent {
     { title: 'Condition', url: '/conditions', icon: 'folder' },
     { title: 'A propos', url: '/abouts', icon: 'stats-chart' },
     { title: 'Confidentialité', url: '/confidentialites', icon: 'create' },
-    // { title: 'Profile', url: '/profile', icon: 'person' },
-    // { title: 'Profile', url: '/profile', icon: 'person' },
+    
     {
       title: 'Réglages',
       url: '/settings',
@@ -33,8 +35,7 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private menu: MenuController,
-    private afAuth:AngularFireAuth) {
+    private menu: MenuController) {
     }
 
     public closeMenu(){

@@ -1,9 +1,9 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="primary">
+  <ion-toolbar color="success">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title *ngIf="data">{{ data.location.name }}</ion-title>
+    <ion-title *ngIf="data" color="success">{{ data.location.name }}</ion-title>
     <ion-title *ngIf="!data">Prévisions météorologiques</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -22,7 +22,7 @@
 
   <ion-header collapse="condense" *ngIf="data">
     <ion-toolbar>
-      <ion-title style="font-size: 15px;">Mali / {{ ville}}</ion-title>
+      <ion-title style="font-size: 12px;">Mali / {{ ville}}</ion-title>
     </ion-toolbar>
   </ion-header>
 
@@ -110,7 +110,7 @@
 
       </ion-grid>
       <ion-accordion-group>
-        <ion-accordion value="colors">
+        <ion-accordion color="success">
           <ion-item slot="header">
             <ion-label (click)="show = !show">Prévision horaire</ion-label>
           </ion-item>
