@@ -27,6 +27,7 @@ const routes: Routes = [
         path: 'forecast',
         loadChildren: () => import('../forecast/forecast.module').then(m => m.ForecastPageModule)
       },
+  
       {
         path: '',
         redirectTo: '/tabs/feed',
