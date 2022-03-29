@@ -9,14 +9,14 @@
 <ion-content [fullscreen]="true">
   <ion-slides pager="true" [options]="slideOpts" #slides>
     <ion-slide *ngFor="let actu of actualites">
-      <ion-card>
+      <ion-card style="border-radius: 50px;">
         <ion-card-header>
           <p>{{actu.Date}}</p>
           <ion-img src="{{actu.Image}}"></ion-img>
-          <ion-card-title>{{actu.Name}}</ion-card-title>
+          <ion-card-title  style="height: 5em">{{actu.Name}}</ion-card-title>
         </ion-card-header>
         <ion-card-content>
-          <p>{{actu.Description}}</p>
+          <h2>{{actu.Description}}</h2>
         </ion-card-content>
       </ion-card>
     </ion-slide>
