@@ -1,13 +1,4 @@
-<!-- <ion-header>
-  <ion-toolbar class='bg_transp' lines="none">
-    <ion-buttons slot="start">
-     
-    </ion-buttons>
-    <ion-title>Post</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content [fullscreen]="true"> -->
-<ion-card color="primary">
+<ion-card color="success">
   <ion-card-content class="ion-no-padding">
     <ion-grid>
       <ion-row>
@@ -16,19 +7,19 @@
         </ion-col>
         <ion-col size="6">
           <ion-row>
-            <ion-text color="primary">
+            <ion-text color="success">
               <h2>{{ post.from }}</h2>
             </ion-text>
           </ion-row>
           <ion-row>
-            <ion-text color="secondary">
+            <ion-text color="success">
               <p>{{ post.createdAt?.toMillis() | date:'short' }}</p>
             </ion-text>
           </ion-row>
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-text color="secondary">
+        <ion-text color="success">
           <h2>{{ post.ville }}</h2>
         </ion-text>
       </ion-row>
@@ -39,11 +30,11 @@
 
         <ion-chip *ngIf="post.type==='climat'" size="small">
           <ion-icon name="partly-sunny-outline" color="primary"></ion-icon>
-          <ion-label color="primary">climat</ion-label>
+          <ion-label color="success">climat</ion-label>
         </ion-chip>
         <ion-chip *ngIf="post.type==='conseil'" size="small">
           <ion-icon name="information-circle-outline" color="success"></ion-icon>
-          <ion-label color="primary">Conseil</ion-label>
+          <ion-label color="success">Conseil</ion-label>
         </ion-chip>
         <ion-chip *ngIf="post.type==='question'" size="small">
           <ion-icon name="help-circle-outline" color="warning"></ion-icon>
@@ -51,7 +42,7 @@
         </ion-chip>
 
         <ion-row class="ion-padding">
-          <ion-text color="primary" class="post-message">
+          <ion-text color="success" class="post-message">
             <h2>{{ post.msg }}</h2>
           </ion-text>
         </ion-row>
@@ -59,14 +50,14 @@
         <ion-col size="6" class="ion-align-self-center">
           <ion-chip *ngIf="post.countLikes >= 0" size="small">
             <ion-icon name="heart-outline" color="danger"></ion-icon>
-            <ion-label color="primary">{{ post.countLikes }} Aimer</ion-label>
+            <ion-label color="success">{{ post.countLikes }} Aimer</ion-label>
           </ion-chip>
         </ion-col>
 
         <ion-col size="6" class="ion-align-self-center">
           <ion-chip *ngIf="(post.comments$ | async)?.length>=0" size="small">
             <ion-icon name="chatbox-ellipses-outline" color="success"></ion-icon>
-            <ion-label color="primary">{{ post.countComments }} Réponse</ion-label>
+            <ion-label color="success">{{ post.countComments }} Réponse</ion-label>
           </ion-chip>
         </ion-col>
 
@@ -85,7 +76,7 @@
           </ion-textarea>
         </ion-col>
         <ion-col size="3">
-          <ion-button expand="block" fill="clear" color="primary" [disabled]="newMsg === ''" class="msg-btn"
+          <ion-button expand="block" color="secondary" [disabled]="newMsg === ''" class="msg-btn"
             (click)="addPostComment()">
             <ion-icon class="sendCommentBtn" name="send" slot="icon-only"></ion-icon>
           </ion-button>
@@ -97,7 +88,7 @@
 
           <ion-col size="10" class="align-items-stretch">
             <ion-row class="align-items-stretch">
-              <ion-text color="secondary">{{comment.fromName}} . <span class="timestamp">{{
+              <ion-text color="success">{{comment.fromName}} . <span class="timestamp">{{
                   comment.createdAt?.toMillis() | date:'short' }}</span></ion-text>
             </ion-row>
             <ion-row class="align-items-stretch">
@@ -118,7 +109,7 @@
       <ion-row class="btnRow">
 
         <ion-col size="4" class="ion-align-self-center">
-          <ion-button fill="clear" (click)="togglePostLiked()" color="primary">
+          <ion-button fill="clear" (click)="togglePostLiked()" color="success">
             <ion-icon [ngClass]="{'liked' : post.userLikes}"
               [name]="post.userLikes === true ? 'heart' : 'heart-outline'" slot="icon-only"></ion-icon>
           </ion-button>
