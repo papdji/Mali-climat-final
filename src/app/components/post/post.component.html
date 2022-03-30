@@ -1,11 +1,11 @@
 <ion-card color="success">
-  <ion-card-content class="ion-no-padding">
+  <ion-card-content class="ion-no-padding; ion-no-marging">
     <ion-grid>
       <ion-row>
-        <ion-col size="6">
+        <ion-col size="7">
           <ion-img [src]="postImage"></ion-img>
         </ion-col>
-        <ion-col size="6">
+        <ion-col size="5">
           <ion-row style="padding-left: 30px;">
             <ion-text color="success">
               <h2>{{ post.from }}</h2>
@@ -19,7 +19,7 @@
         </ion-col>
       </ion-row>
       <ion-row>
-        <ion-text color="success">
+        <ion-text color="primary">
           <h2>{{ post.ville }}</h2>
         </ion-text>
       </ion-row>
