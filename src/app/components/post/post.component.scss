@@ -4,8 +4,7 @@ ion-card {
   }
 
 .commentsarea {
-  background-color: #d1e6fd !important;
-
+  background-color: #fff0f0 !important;
 }
 
 [size="medium"] {
@@ -33,7 +32,7 @@ ion-item-divider{
 }
 
 ion-img {
-  width: 85px;
+  width: 95px;
 }
 
 .timestamp {
@@ -45,7 +44,7 @@ ion-img {
   width: 100%;
   border: 1px solid var(--ion-color-medium);
   border-radius: 35px;
-  background-color: rgb(18, 194, 71);
+  background-color: rgb(85, 231, 122);
   resize: none;
   margin-top: 0px;
   --padding-start: 8px;

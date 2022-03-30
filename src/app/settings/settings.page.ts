@@ -21,7 +21,6 @@ export class SettingsPage implements OnInit {
       (token) => {
         if(token){
           // token present
-          alert(token)
           this.notifications = true;
         }
       },
@@ -38,9 +37,7 @@ export class SettingsPage implements OnInit {
     if(e.detail.checked){
       this.afMessaging.requestToken
        .subscribe(
-         (token) => { 
-           console.log('Permission accordée! Enregistrez-le sur votre serveur!', token);
-          alert(token) },
+         (token) => { console.log('Permission granted! Save it to your server!', token); },
          (error) => { console.error(error); },
        );
     } else {
@@ -48,7 +45,7 @@ export class SettingsPage implements OnInit {
       this.afMessaging.getToken
       .pipe(mergeMap(token => this.afMessaging.deleteToken(token)))
       .subscribe(
-        (token) => { console.log('Jeton supprimé !'); },
+        (token) => { console.log('Token Deleted!'); },
       );
     }
   }

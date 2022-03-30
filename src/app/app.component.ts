@@ -3,22 +3,15 @@ import { MenuController } from '@ionic/angular';
 import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
-import {
-  ActionPerformed,
-  PushNotificationSchema,
-  PushNotifications,
-  Token,
-} from '@capacitor/push-notifications';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html'
 })
 export class AppComponent {
-  
+  isDarkThemeTurnedOn: boolean;
   public labels = ['Test'];
   public currentUser: any;
-  public dark = false;
-
   public appPages = [
     {
       title: 'Accueil',
@@ -36,6 +29,7 @@ export class AppComponent {
       icon: 'settings'
     }
   ];
+  render: any;
 
   constructor(
     private platform: Platform,
@@ -43,20 +37,29 @@ export class AppComponent {
     private statusBar: StatusBar,
     private menu: MenuController) {
   }
-  
 
   public closeMenu() {
     this.menu.close();
-    const toggle = document.getElementById('themeToggle');
-console.log(toggle);
+    const themeSelected = localStorage.getItem("themeSelected")
+    if (themeSelected == "light") {
+      this.isDarkThemeTurnedOn = false;      
+    } else if (themeSelected == "dark") {
+      this.isDarkThemeTurnedOn = true;      
+    } else {
+      this.isDarkThemeTurnedOn = false;      
+    }
 
-    // Listen for the toggle check/uncheck to toggle the dark class on the <body>
-    toggle.addEventListener('ionChange', (ev) => {
-      console.log('grealt');
-      
-      document.body.classList.toggle('dark', ev['detail'].checked);
-    });
-
+  }
+  onToggleColorTheme(ev: any) { 
+    if (ev.detail.checked) {
+      let themeSelected = "dark";
+      localStorage.setItem("themeSelected", themeSelected);
+      this.render.setAttribute(document.body, "color-theme", "dark");      
+    } else {
+      let themeSelected = "light";
+      localStorage.setItem("themeSelected", themeSelected);
+      this.render.setAttribute(document.body, "color-theme", "light");
+    }
   }
 
 
@@ -66,42 +69,4 @@ console.log(toggle);
       this.splashScreen.hide();
     });
   }
-  // ngOnInit() {
-  //   console.log('Initializing HomePage');
-  
-  //  // Request permission to use push notifications
-  //   // iOS will prompt user and return if they granted permission or not
-  //   // Android will just grant without prompting
-  //   PushNotifications.requestPermissions().then(result => {
-  //     if (result.receive === 'granted') {
-  //       // Register with Apple / Google to receive push via APNS/FCM
-  //       PushNotifications.register();
-  //     } else {
-  //       // Show some error
-  //     }
-  //   });
-
-  //   PushNotifications.addListener('registration', (token: Token) => {
-  //     alert('Push registration success, token: ' + token.value);
-  //   });
-
-  //   PushNotifications.addListener('registrationError', (error: any) => {
-  //     alert('Error on registration: ' + JSON.stringify(error));
-  //   });
-
-  //   PushNotifications.addListener(
-  //     'pushNotificationReceived',
-  //     (notification: PushNotificationSchema) => {
-  //       alert('Push received: ' + JSON.stringify(notification));
-  //     },
-  //   );
-
-  //   PushNotifications.addListener(
-  //     'pushNotificationActionPerformed',
-  //     (notification: ActionPerformed) => {
-  //       alert('Push action performed: ' + JSON.stringify(notification));
-  //     },
-  //   );
-  // }
 }
-
