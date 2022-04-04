@@ -62,6 +62,18 @@
       "title": "Ménaka",
       "slug": "Ménaka",
       "description": "Easily shareable via URLs. Another characteristic inherited from websites, a well-designed website should use the URI to indicate its current state. This enables the web app to retain or reload its state when the user bookmarks or shares the app’s URL."
+    },
+    {
+      "image": "assets/images/linkable.jpg",
+      "title": "Kidal",
+      "slug": "Kidal",
+      "description": "Easily shareable via URLs. Another characteristic inherited from websites, a well-designed website should use the URI to indicate its current state. This enables the web app to retain or reload its state when the user bookmarks or shares the app’s URL."
+    },
+    {
+      "image": "assets/images/linkable.jpg",
+      "title": "San",
+      "slug": "San",
+      "description": "Easily shareable via URLs. Another characteristic inherited from websites, a well-designed website should use the URI to indicate its current state. This enables the web app to retain or reload its state when the user bookmarks or shares the app’s URL."
     }
   ]
 }
