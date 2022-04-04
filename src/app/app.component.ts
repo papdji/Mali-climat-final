@@ -42,7 +42,7 @@ export class AppComponent {
     this.menu.close();
     const themeSelected = localStorage.getItem("themeSelected")
     if (themeSelected == "light") {
-      this.isDarkThemeTurnedOn = false;      
+      this.isDarkThemeTurnedOn = true;      
     } else if (themeSelected == "dark") {
       this.isDarkThemeTurnedOn = true;      
     } else {

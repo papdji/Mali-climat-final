@@ -23,7 +23,7 @@ const routes: Routes = [
     loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
   },
   {
-    path: '',
+    path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),
     ...canActivate(redirectLoggedInToChat)
   },
@@ -71,7 +71,12 @@ const routes: Routes = [
   {
     path: 'localites',
     loadChildren: () => import('./pages/localites/localites.module').then( m => m.LocalitesPageModule)
+  },
+  {
+    path: '',
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
   }
+
 
 ];
 
