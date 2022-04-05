@@ -9,6 +9,11 @@ import { Post, PostService } from 'src/app/services/post.service';
   styleUrls: ['./post.component.scss'],
 })
 export class PostComponent implements OnInit {
+  autocomplete: { input: string; }; 
+
+  updateSearchResults() {
+     console.log(this.autocomplete.input)    //search input will display
+  }
   slideOpts = {
     speed: 500
   };

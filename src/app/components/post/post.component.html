@@ -72,11 +72,11 @@
       <ion-row class="ion-align-items-center">
         <ion-col size="9">
           <ion-textarea autoGrow="true" class="comment-input" rows="1" maxLenght="10000" [(ngModel)]="newMsg"
-            placeholder="Ajoutez votre commentaire ici...">
+            placeholder="Reponse...">
           </ion-textarea>
         </ion-col>
         <ion-col size="3">
-          <ion-button expand="block" color="light" [disabled]="newMsg === ''" class="msg-btn"
+          <ion-button expand="block" color="success" [disabled]="newMsg === ''" class="msg-btn"
             (click)="addPostComment()">
             <ion-icon class="sendCommentBtn" name="send" slot="icon-only"></ion-icon>
           </ion-button>

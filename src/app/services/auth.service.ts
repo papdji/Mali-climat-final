@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore } from '@angular/fire/firestore';
+import * as firebase from 'firebase';
+import { auth } from 'firebase';
 import { Observable } from 'rxjs';
 import { ObserveOnOperator } from 'rxjs/internal/operators/observeOn';
 import { map } from 'rxjs/operators';
@@ -42,7 +44,7 @@ export class AuthService {
         profile:"Utilisateur",
         email: credential.user.email,
         name: credential.user.email.split('@')[0],
-        image: ''
+        image: 'notdefined'
       });
   }
 
@@ -50,6 +52,11 @@ export class AuthService {
     return this.afAuth.signInWithEmailAndPassword(email, password).then(
 
     );
+  }
+  loginGoogle(){
+    this.afAuth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(userData=>{
+      console.log("connecter avec succès")
+    });
   }
 
   signOut() {
@@ -63,9 +70,9 @@ export class AuthService {
   getUserProfile()  {
     const observable = new Observable((observer) => {
       this.getCurrentUser().then( uid => {
-        console.log('User UID: ', uid);
+        // console.log('User UID: ', uid);
         this.afs.collection('users').doc(uid).valueChanges().subscribe( (profile: User) => {
-          if ( profile.image === '') {
+          if ( profile.image === 'notdefined') {
             profile.image = 'assets/undraw_male_avatar_323b.svg';
           }
           observer.next(profile);

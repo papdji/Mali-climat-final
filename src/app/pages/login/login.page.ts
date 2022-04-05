@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AlertController, LoadingController } from '@ionic/angular';
+import * as firebase from 'firebase';
 import { AuthService } from 'src/app/services/auth.service';
 import { ChatService } from 'src/app/services/chat.service';
 
@@ -75,5 +76,15 @@ export class LoginPage implements OnInit {
   get password() {
     return this.credentialForm.get('password');
   }
-
+  async loginGoogle(){
+    try {
+      const user = await this.authService.loginGoogle();
+      this.router.navigateByUrl('/tabs/feed', { replaceUrl: true });
+  
+    } catch (error) {
+      console.log('Error->', error);
+    }
+  }
+  
+  
 }
